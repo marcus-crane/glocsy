@@ -1,0 +1,160 @@
+/* DOCUMENTATION */
+
+.glossary-tooltip {
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  color: $black;
+  background: transparent;
+  text-decoration: none !important;
+}
+
+// glossary
+
+body.glossary {
+  main {
+
+    ul.glossary-terms > li {
+      list-style-type: none;
+      padding: 0.5em;
+      padding-bottom: calc(min(1em, 0.25em + 0.25vh ));
+      margin: 0;
+      margin-top: calc(min(1.5em, 0.2em + 1vh ));
+    }
+
+    ul.glossary-terms > li.hide {
+      display: none;
+    }
+
+    ul.glossary-terms > li:has(.term-anchor:target) {
+      border-left: 0.3em solid $primary;
+      background: rgba($secondary, 0.2);
+    }
+
+    #tag-container {
+      float: left;
+      max-width: calc(max(80%, 100em));
+      border-top: 1px solid $secondary;
+      border-bottom: 1px solid $secondary;
+      padding-top: 0.5em 0;
+      margin: 2em 0;
+
+      > p {
+        display: inline-block;
+        padding-top: 0.2em;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .tag-option {
+        border-radius: 0.33em;
+        padding: 0.75em;
+        margin: 1em;
+        margin-top: 0.2em;
+        float: left;
+        font-weight: bold;
+      }
+
+      .tag-description {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.2em;
+        padding-bottom: 0.8em;
+        text-align: center;
+      }
+      .canonical-tag {
+        color: white;
+        background-color: $secondary;
+      }
+
+      .canonical-tag a {
+        color: inherit;
+        background: transparent;
+        text-decoration: none !important;
+      }
+
+      .active-tag {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+
+    .term-anchor:target + .term-name > span {
+      color: $primary;
+    }
+
+    .term-anchor:target {
+      visibility: initial;
+    }
+
+    .glossary-term-name {
+      font-weight: bold;
+      display: inline-block;
+      padding-left: 0.25em;
+      padding-right: 0.25em;
+    }
+
+    .glossary-aka {
+      display: inline-block;
+      padding-left: 0.25em;
+      padding-right: 0.25em;
+      padding-bottom: 0.25em;
+    }
+
+    #glossary-details-before {
+       margin-top: 3em;
+       font-style: italic;
+       clear: both;
+    }
+
+    .preview-text {
+      display: inline-block;
+      margin-bottom: 0.2em;
+    }
+
+    .preview-text + * {
+      margin-top: 0.2em;
+    }
+
+    .term-definition {
+       margin-left: calc(min(2em, 0.5em + 0.75vw));
+
+       .hide {
+          display: none;
+       }
+    }
+
+    .glossary-aka {
+      font-style: italic;
+    }
+
+    .preview-text p {
+      display: inline;
+    }
+
+    .permalink {
+      display: inline-block;
+      width: 0.9em;
+      height: 0.9em;
+      padding-left: 0.1em;
+
+      &.hide {
+        visibility: hidden;
+      }
+    }
+
+    .term-anchor {
+      display: block;
+      position: relative;
+      top: -4rem; // adjust scrolling to target
+      visibility: hidden;
+    }
+
+
+    .invisible {
+      visibility: hidden;
+    }
+
+  }
+}

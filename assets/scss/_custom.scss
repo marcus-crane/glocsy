@@ -1,0 +1,22 @@
+/* DOCUMENTATION */
+
+/* Don't show lead text */
+body.td-documentation {
+  main {
+    @media only screen {
+       > * {
+         > .lead:first-of-type {
+         display: none;
+        }
+      }
+    }
+  }
+}
+
+/* glossary tooltip */
+.glossary-tooltip {
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  color: black;
+  text-decoration: none !important;
+}
