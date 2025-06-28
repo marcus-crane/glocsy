@@ -3,7 +3,7 @@ title: Glossary
 layout: glossary
 body_class: glossary
 default_active_tag: outside
-menu: {main: {weight: 30}}
+weight: 5
 ---
 
 This is where all of the glossary items are stored
