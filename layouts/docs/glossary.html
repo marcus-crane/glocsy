@@ -4,16 +4,16 @@
 
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-<p>This glossary is intended to be a comprehensive, standardized list of Kubernetes terminology. It includes technical terms that are specific to Kubernetes, as well as more general terms that provide useful context.</p>
+<p>This glossary is intended to be a comprehensive, standardized list of terminology. It includes technical terms that are specific to [topic], as well as more general terms that provide useful context.</p>
 <div id="tag-container">
 	<p><em>Filter terms according to their tags</em></p>
 	<div class="tag-description invisible" id="placeholder">.</div>
-	{{ range (index site.Data "canonical-tags") }}
+	{{ range (index site.Data "tags") }}
 	<div class="tag-description hide" id="{{ printf "tag-%s-description" .id  }}">
 		{{ .description }}
 	</div>
 	{{ end }}
-	{{ $sorted_tags := sort (index site.Data "canonical-tags") "id" }}
+	{{ $sorted_tags := sort (index site.Data "tags") "id" }}
 	{{ range $sorted_tags }}
 	{{ $full_tag_name := printf "tag-%s" .id }}
 	<span id="{{ $full_tag_name  }}" class="tag-option canonical-tag" data-target="{{ $full_tag_name  }}">
