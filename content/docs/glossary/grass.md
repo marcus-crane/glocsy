@@ -4,7 +4,7 @@ id: grass
 date: 2025-06-23
 full_link:
 short_description: Weird green stuff that grows outside
-aka
+aka:
 - pasture
 tags:
 - outside
