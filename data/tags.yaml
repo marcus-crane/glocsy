@@ -1,6 +1,6 @@
 - id: fundamental
   name: Fundamental
-  description: Relevant for a first-time user of Kubernetes.
+  description: Relevant for first-time users.
 
 - id: outside
   name: Outside
